@@ -1,107 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Be My Valentine?</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <title>Welcome honey</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-    .card {
-      background: white;
-      padding: 40px 50px;
-      border-radius: 20px;
-      text-align: center;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-    }
+  <body>
+    <main class="card" aria-labelledby="interaction-question">
+      <h1 id="interaction-question">What to use?</h1>
+      <div class="buttons hearts-row" role="list">
+        <a
+          href="touch.html"
+          class="heart-option"
+          role="listitem"
+          aria-label="Touch"
+        >
+          <span class="heart-label">Touch</span>
+        </a>
 
-    h1 {
-      margin-bottom: 30px;
-      font-size: 2.2rem;
-      color: #e63946;
-    }
-
-    .buttons {
-      position: relative;
-      height: 120px;
-    }
-
-    button {
-      border: none;
-      border-radius: 12px;
-      padding: 15px 30px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-      position: absolute;
-    }
-
-    #yesBtn {
-      background-color: #ff4d6d;
-      color: white;
-      left: 50%;
-      transform: translateX(-120%);
-    }
-
-    #noBtn {
-      background-color: #adb5bd;
-      color: white;
-      left: 50%;
-      transform: translateX(20%);
-    }
-  </style>
-</head>
-<body>
-  <div class="card">
-    <h1>Will you be my Valentine? 💖</h1>
-    <div class="buttons">
-      <button id="yesBtn">Yes 💕</button>
-      <button id="noBtn">No 🙈</button>
-    </div>
-  </div>
-
-  <script>
-    const noBtn = document.getElementById("noBtn");
-    const yesBtn = document.getElementById("yesBtn");
-
-    let yesScale = 1;
-
-    noBtn.addEventListener("mouseenter", () => {
-      const x = Math.random() * 300 - 150;
-      const y = Math.random() * 150 - 75;
-      noBtn.style.transform = `translate(${x}px, ${y}px)`;
-    });
-
-    yesBtn.addEventListener("mouseenter", () => {
-      yesScale += 0.1;
-      yesBtn.style.transform = `translateX(-120%) scale(${yesScale})`;
-    });
-
-    yesBtn.addEventListener("click", () => {
-      document.body.innerHTML = `
-        <div style="
-          height:100vh;
-          display:flex;
-          align-items:center;
-          justify-content:center;
-          font-family:'Comic Sans MS', cursive;
-          background:linear-gradient(135deg, #ff9a9e, #fad0c4);
-          text-align:center;
-        ">
-          <h1 style="font-size:3rem;color:#e63946;">
-            Yay!!! 💖💍<br>
-            I love you forever!
-          </h1>
-        </div>
-      `;
-    });
-  </script>
-</body>
+        <a
+          href="mouse.html"
+          class="heart-option"
+          role="listitem"
+          aria-label="Mouse"
+        >
+          <span class="heart-label">Mouse</span>
+        </a>
+      </div>
+    </main>
+  </body>
 </html>
