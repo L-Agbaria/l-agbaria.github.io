@@ -6,16 +6,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (noBtn) {
     noBtn.addEventListener("mouseover", () => {
-        const x = (Math.random() + 1) * 400 * (Math.random() - 0.5);
-        const y = (Math.random() + 1) * 200 * (Math.random() - 0.5);
-        noBtn.style.transform = `translate(${x}px, ${y}px)`;
+        const x = (Math.random() + 1) * 15 * (Math.random() - 0.5);
+        const y = (Math.random() + 1) * 15 * (Math.random() - 0.5);
+        noBtn.style.transform = `translate(${x}rem, ${y}rem)`;
         yesScale += 0.1;
         yesBtn.style.transform = `scale(${yesScale})`;
     });
     noBtn.addEventListener("click", () => {
-        const x = (Math.random() + 1) * 400 * (Math.random() - 0.5);
-        const y = (Math.random() + 1) * 200 * (Math.random() - 0.5);
-        noBtn.style.transform = `translate(${x}px, ${y}px)`;
+        const x = (Math.random() + 1) * 15 * (Math.random() - 0.5);
+        const y = (Math.random() + 1) * 15 * (Math.random() - 0.5);
+        noBtn.style.transform = `translate(${x}rem, ${y}rem)`;
         yesScale += 0.1;
         yesBtn.style.transform = `scale(${yesScale})`;
     });
@@ -27,4 +27,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
