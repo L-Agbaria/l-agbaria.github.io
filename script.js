@@ -1,4 +1,3 @@
-/* Valentine card interaction logic */
 (function () {
   let phrase = 0;
   const questionEl = document.getElementById("valentine-question");
@@ -21,16 +20,22 @@
     ";-;"
   ];
 
-  /* On No: replace question with a random follow-up prompt */
   btnNo.addEventListener("click", function () {
     questionEl.textContent = followUpQuestions[phrase];
     phrase = phrase + 1;
     phrase = phrase % followUpQuestions.length;
+
+    if (Math.random() < 0.95) {
+      const parent = btnYes.parentNode;
+      if (btnNo.nextElementSibling === btnYes) {
+        parent.insertBefore(btnYes, btnNo);
+      } else {
+        parent.insertBefore(btnNo, btnYes);
+      }
+    }
   });
 
-  /* On Yes: redirect to the success page */
   btnYes.addEventListener("click", function () {
     window.location.href = "yes.html";
   });
 })();
-
