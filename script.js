@@ -15,7 +15,10 @@
     "Last chance?",
     "But you love me!",
     "Please please please...",
-    "Did you mean to press no?"
+    "Did you mean to press no?",
+    "Can you press yes?",
+    "Time to press yes",
+    ";-;"
   ];
 
   /* On No: replace question with a random follow-up prompt */
@@ -30,3 +33,4 @@
     window.location.href = "yes.html";
   });
 })();
+
