@@ -25,7 +25,7 @@
     phrase = phrase + 1;
     phrase = phrase % followUpQuestions.length;
 
-    if (Math.random() < 0.95) {
+    if (Math.random() < 0.26) {
       const parent = btnYes.parentNode;
       if (btnNo.nextElementSibling === btnYes) {
         parent.insertBefore(btnYes, btnNo);
@@ -39,3 +39,4 @@
     window.location.href = "yes.html";
   });
 })();
+
